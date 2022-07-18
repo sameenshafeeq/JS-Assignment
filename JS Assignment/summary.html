@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summary</title>
+</head>
+<body>
+    <script>
+    var urlParams = new URLSearchParams(window.location.search);
+    var msgName = urlParams.has('NAME'); //
+    var NAME = urlParams.get('NAME'); //
+
+    var msgEmail = urlParams.has('EMAIL'); //
+    var EMAIL = urlParams.get('EMAIL'); //
+
+    var msgAbout = urlParams.has('ABOUT'); //
+    var ABOUT = urlParams.get('ABOUT'); //
+    function changetheValues()
+    {
+        document.getElementById("name").innerHTML =NAME;
+        document.getElementById("email").innerHTML=EMAIL;
+        document.getElementById("aboutus").innerHTML=ABOUT;
+    }
+    </script>
+    <ul onclick="changetheValues()">
+        <li><label>Your entered Name is:</label></li>
+        <li><span id ="name"style="color:blue">Name</span></li>
+        <li><label>Your entered Email is:</label></li>  
+        <li><span id ="email" style="color:blue">Name</span></li>
+        <li><label>Your entered About Us Detail is:</label></li>
+        <li><span id ="aboutus" style="color:blue">Name</span></li> 
+    </ul>
+</body>
+</html>
